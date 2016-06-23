@@ -4,7 +4,17 @@ class CodeController {
 
 	public static function serviceExecute($code) {
 
-		$res = shell_exec('leekscript -e "' . self::escape($code) . '" "{}"');
+		if (strlen($code) > 10000) {
+			return Response::fail(['error' => '10000 bytes max']);
+		}
+
+		$file = '../codes/code-' . time() . '-' . rand() . '.ls';
+
+		file_put_contents($file, $code);
+
+		$res = shell_exec("leekscript -f ../codes/$file");
+
+		//unlink($file);
 
 		return Response::success(['result' => $res]);
 	}
