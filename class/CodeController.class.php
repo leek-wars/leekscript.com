@@ -12,7 +12,7 @@ class CodeController {
 
 		file_put_contents($file, $code);
 
-		$res = shell_exec("leekscript -f ../codes/$file");
+		$res = shell_exec("leekscript -j ../codes/$file");
 
 		//unlink($file);
 
