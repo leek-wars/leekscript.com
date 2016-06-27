@@ -9,4 +9,10 @@
 <button ng-click='random()'>Random code</button>
 <br>
 <br>
-<div>{{ result }}</div>
+<div ng-show='result'>
+	<b>{{ result.res }}</b>
+	<br>
+	<i>Time :</i> {{ result.time / 1000000 }}ms
+	<br>
+	<i>{{ result.ops }} operations</i>
+</div>
