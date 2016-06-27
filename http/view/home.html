@@ -12,7 +12,7 @@
 <div ng-show='result'>
 	<b>{{ result.res }}</b>
 	<br>
-	<i>Time :</i> {{ result.time / 1000000 }}ms
+	<i>Time :</i> {{ Math.round(result.time / 1000) / 1000 }}ms
 	<br>
 	<i>{{ result.ops }} operations</i>
 </div>
