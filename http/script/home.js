@@ -14,9 +14,9 @@ leekscript.controller('home_controller', function($scope, $route, $http) {
 
 	$scope.execute = function() {
 		$http.post('/api/code/execute', {code: $scope.console}).success(function(data) {
-			console.log(data)
-			//console.log(JSON.parse(data.result))
-			$scope.result = data;
+			var result = JSON.parse(data.result)
+			console.log(result)
+			$scope.result = result;
 		})
 	}
 
