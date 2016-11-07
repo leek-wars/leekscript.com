@@ -15,6 +15,14 @@ leekscript.config(function($routeProvider, $locationProvider) {
 		templateUrl : 'view/documentation.html',
 		controller  : 'documentation_controller'
 	})
+	.when('/presentation', {
+		templateUrl : 'view/presentation.html',
+		controller  : 'presentation_controller'
+	})
+	.when('/faq', {
+		templateUrl : 'view/faq.html',
+		controller  : 'faq_controller'
+	})
 
 	$locationProvider.html5Mode(true)
 })

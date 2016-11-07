@@ -1,5 +1,9 @@
 
-<h3><a href="/documentation">Documentation</a></h3>
+<h3>
+	<a href="/presentation">Presentation</a> -
+	<a href="/documentation">Documentation</a> -
+	<a href="/faq">F.A.Q.</a>
+</h3>
 
 <textarea id='console' spellcheck=false ng-model='console' ng-keyup='keypressed($event)'>
 
@@ -16,3 +20,40 @@
 	<br>
 	<i>{{ result.ops }} operations</i>
 </div>
+
+<h1>Showcase</h1>
+
+<h2>Une syntaxe simple et souple</h2>
+<val>let x = 12</val><br>
+<val>[1, 2, 3].map(x -> x ^ 2)</val><br>
+<val>'hello ' + 'world'</val><br>
+<val>if x &lt; 12 then 'ok' else 'no' end</val><br>
+
+<h2>Fonctionnel</h2>
+<val>[[14, 2], [213, 1], [54, 6], [12, -1]].map(x -> x[0] * x[1])</val><br>
+<val>let g = a -> x -> a ^ x;  let f = g(12);  f(2) // 144</val>
+
+<h2>Opérateurs</h2>
+De nombreux opérateurs sont utilisables pour remplacer certaines méthodes en fonction de la classe de la valeur. Par exemple les codes suivants ont le même effet : <br><br>
+
+<val>String.size(String.split(String.reverse('hello world'), ''))</val><br>
+<val>'hello world'.reverse().split('').size()</val><br>
+<val>|~'hello world' / ' '|</val><br>
+<br>
+
+<val>Array.map([1, 2, 3], x -> x ^ 2)</val><br>
+<val>[1, 2, 3] ~~ x -> x ^ 2</val><br>
+<br>
+
+Les opérateurs peuvent aussi s'utiliser comme des fonctions : <br><br>
+<val>+.class // Function</val><br>
+<val>+(12, 5) // 17</val><br>
+<val>let g = ope -> x, y -> ope(x, y); let add = g(+); add(12, 5) // 17</val><br>
+<val>let res = (if op == 'add' then + else * end)(12, 5)</val>
+
+<h2>Toutes les valeurs sont des objets</h2>
+Toutes les valeurs sont manipulables comme des objets, elles peuvent avoir des attributs et des méthodes. Mais pas de panique, le compilateur se charge d'optimiser le programme en utilisant des types primitifs au maximum. <br><br>
+<val>let x = -12; x.abs() // 12</val><br>
+<val>'hello'.size() // 5</val><br>
+<val>[].class.name // 'Array'</val><br>
+<val>(x -> x).class // &lt;class Function&gt;</val><br>
