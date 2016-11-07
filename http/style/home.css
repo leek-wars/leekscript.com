@@ -14,17 +14,18 @@ h1 a {
 #console {
 	background: black;
 	color: white;
-	width: 600px;
-	height: 400px;
+	width: 800px;
+	height: 300px;
 	font-size: 15px;
 	font-family: monospace;
 	margin: 10px 0;
 	padding: 5px;
+	font-size: 17px;
 }
 
 val {
 	font-family: monospace;
 	background: #eee;
 	padding: 2px 4px;
-	font-size: 14px;
+	font-size: 16px;
 }
