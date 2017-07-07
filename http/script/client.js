@@ -23,6 +23,10 @@ leekscript.config(function($routeProvider, $locationProvider) {
 		templateUrl : 'view/faq.html',
 		controller  : 'faq_controller'
 	})
+	.when('/operations', {
+		templateUrl : 'view/operations.html',
+		controller  : 'operations_controller'
+	})
 
 	$locationProvider.html5Mode(true)
 })
