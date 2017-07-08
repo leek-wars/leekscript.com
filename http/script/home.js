@@ -3,7 +3,7 @@ leekscript.controller('home_controller', function($scope, $route, $http) {
 	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"
 	$scope.Math = window.Math
 
-	$scope.console = "let n = [1, 2, 3]\nlet carrés = n ~~ x -> x ^ 2\ncarrés.sum()\n\n// or\n\n[1, 2, 3].map(x -> x ^ 2).sum()"
+	$scope.console = "let n = [1, 2, 3]\nlet carrés = n ~~ x -> x ^ 2\ncarrés.sum()"
 
 	$scope.keypressed = function(event) {
 		if (event.keyCode == 13) {
