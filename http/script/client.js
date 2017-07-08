@@ -1,7 +1,7 @@
-var leekscript = angular.module('leekscript', ['ngRoute']);
+var leekscript = angular.module('leekscript', ['ngRoute'])
 
 String.prototype.ucfirst = function() {
-    return this.charAt(0).toUpperCase() + this.substr(1);
+    return this.charAt(0).toUpperCase() + this.substr(1)
 }
 
 leekscript.config(function($routeProvider, $locationProvider) {
