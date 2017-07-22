@@ -7,6 +7,7 @@ body {
 	margin: 0;
 	background: #2E3133;
 	color: #eee;
+	overflow-y: scroll;
 }
 
 h1 {
