@@ -1,37 +1,41 @@
-<h1>Guide</h1>
+<div class='wrapper'>
 
-<h2>Classes</h2>
+	<h1>Guide</h1>
 
-Dans LeekScript, toutes les valeurs sont associées à une classe, il y a 8 classes de base :
+	<h2>Classes</h2>
 
-<ul>
-	<li><b>Null</b> : possède une unique valeur qui peut servir à représenter une variable indéfinie ou une erreur. <br>
-Valeurs possible : <val>null</val>
-	<li><b>Boolean</b> : représente un booléen, avec 2 valeurs possibles : vrai ou faux. <br>
-Valeurs possibles : <val>true</val>, <val>false</val>
-	<li><b>Number</b> : représente un nombre. Les nombres possèdent des méthodes comme .abs(), .cos() etc. détaillées plus loin.<br>
-Valeurs possibles : <val>0</val>, <val>12</val>, <val>-5</val>, <val>3.141</val>
-	<li><b>String</b> : représente une chaîne de caractères, un texte. <br>
-Valeurs possibles : <val>''</val>, <val>'hello'</val>, <val>'12345'</val>, <val>'i 4 _ 3a'</val>
-	<li><b>Array</b> : un tableau (ou liste) contenant d'autres valeurs. <br>
-Valeurs possibles : <val>[]</val>, <val>[1, 2, 3]</val>, <val>[1, true, 'hello']</val>, <val>[[1, 2], 3]</val>
-	<li><b>Map</b> : une map (ou tableau associatif) contenant des couples clé-valeur. <br>
-Valeurs possibles : <val>[:]</val>, <val>[1: 'a', 2: 'b', 3: 'c']</val>, <val>['aa': 1, 'bb': true, 'cc': 'hello']</val>, <val>[5.12: [1, 2], 1.57: 3]</val>
-	<li><b>Object</b> : un object contient des valeurs, associées à une clé (chaîne de caractère). <br>
-Valeurs possibles : <val>{}</val>, <val>{a: 1, b: 2, c: 3}</val>, <val>{a: 1, b: true, c: 'hello'}</val>, <val>{a: {a: 12}}</val>
-	<li><b>Function</b> : représente une fonction, qui prend en paramètre une ou plusieurs valeurs et en renvoie une seule. Il y a deux notations : celle avec le mot-clé 'function' et celle simplifiée avec une flèche.<br>
-Valeurs possibles : <val>function() {}</val>, <val>function(x, y) { return x + y }</val>, <val>-> null</val>, <val>x, y -> x + y</val>
-	<li><b>Class</b> : Classe qui représente une classe. <br>
-Valeurs possibles : <val>Null</val>, <val>Boolean</val>, <val>Number</val>, <val>String</val>, <val>Array</val>, <val>Object</val>, <val>Function</val>, <val>Class</val>, <val>class Foo {}</val>, <val>class Bar { let x; let m = function() {} }</val>
+	Dans LeekScript, toutes les valeurs sont associées à une classe, il y a 8 classes de base :
 
-</ul>
+	<ul>
+		<li><b>Null</b> : possède une unique valeur qui peut servir à représenter une variable indéfinie ou une erreur. <br>
+	Valeurs possible : <val>null</val>
+		<li><b>Boolean</b> : représente un booléen, avec 2 valeurs possibles : vrai ou faux. <br>
+	Valeurs possibles : <val>true</val>, <val>false</val>
+		<li><b>Number</b> : représente un nombre. Les nombres possèdent des méthodes comme .abs(), .cos() etc. détaillées plus loin.<br>
+	Valeurs possibles : <val>0</val>, <val>12</val>, <val>-5</val>, <val>3.141</val>
+		<li><b>String</b> : représente une chaîne de caractères, un texte. <br>
+	Valeurs possibles : <val>''</val>, <val>'hello'</val>, <val>'12345'</val>, <val>'i 4 _ 3a'</val>
+		<li><b>Array</b> : un tableau (ou liste) contenant d'autres valeurs. <br>
+	Valeurs possibles : <val>[]</val>, <val>[1, 2, 3]</val>, <val>[1, true, 'hello']</val>, <val>[[1, 2], 3]</val>
+		<li><b>Map</b> : une map (ou tableau associatif) contenant des couples clé-valeur. <br>
+	Valeurs possibles : <val>[:]</val>, <val>[1: 'a', 2: 'b', 3: 'c']</val>, <val>['aa': 1, 'bb': true, 'cc': 'hello']</val>, <val>[5.12: [1, 2], 1.57: 3]</val>
+		<li><b>Object</b> : un object contient des valeurs, associées à une clé (chaîne de caractère). <br>
+	Valeurs possibles : <val>{}</val>, <val>{a: 1, b: 2, c: 3}</val>, <val>{a: 1, b: true, c: 'hello'}</val>, <val>{a: {a: 12}}</val>
+		<li><b>Function</b> : représente une fonction, qui prend en paramètre une ou plusieurs valeurs et en renvoie une seule. Il y a deux notations : celle avec le mot-clé 'function' et celle simplifiée avec une flèche.<br>
+	Valeurs possibles : <val>function() {}</val>, <val>function(x, y) { return x + y }</val>, <val>-> null</val>, <val>x, y -> x + y</val>
+		<li><b>Class</b> : Classe qui représente une classe. <br>
+	Valeurs possibles : <val>Null</val>, <val>Boolean</val>, <val>Number</val>, <val>String</val>, <val>Array</val>, <val>Object</val>, <val>Function</val>, <val>Class</val>, <val>class Foo {}</val>, <val>class Bar { let x; let m = function() {} }</val>
 
-L'utilisateur peut créer ses propres classes, et ainsi crééer plus de classes : <val>class Foo {}</val>. Les classes créées dérivent de la classe de base <b>Object</b> par défaut. Mais il est possible de préciser de quelle classe de base dérive sa nouvelle classe : <val>class Foo extends String {}</val>.
+	</ul>
 
-<h2>Variables</h2>
+	L'utilisateur peut créer ses propres classes, et ainsi crééer plus de classes : <val>class Foo {}</val>. Les classes créées dérivent de la classe de base <b>Object</b> par défaut. Mais il est possible de préciser de quelle classe de base dérive sa nouvelle classe : <val>class Foo extends String {}</val>.
 
-Une variable est un emplacement mémoire associé à un nom, qui permet de stocker une valeur (valeur parmis les classes de base vu ci-dessus).
-<br>
-Exemples : <val>let a = 2</val>, <val>let b = 'hello'</val>, <val>let foo = [1, 2, 3]</val>.
-<br>
-<br>
+	<h2>Variables</h2>
+
+	Une variable est un emplacement mémoire associé à un nom, qui permet de stocker une valeur (valeur parmis les classes de base vu ci-dessus).
+	<br>
+	Exemples : <val>let a = 2</val>, <val>let b = 'hello'</val>, <val>let foo = [1, 2, 3]</val>.
+	<br>
+	<br>
+
+</div>

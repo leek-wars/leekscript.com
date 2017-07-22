@@ -1,23 +1,27 @@
-<h1>Documentation</h1>
+<div class='wrapper'>
 
-<div ng-repeat="(module_name, module) in documentation">
-	<h2>{{ module_name }}</h2>
-	<div ng-repeat="(attr_name, attr) in module.attributes">
-		<h3>{{ attr_name }}</h3>
-		{{ attr.desc }}
-		<br>
-		<b>Valeur : </b>{{ attr.value }}
+	<h1>Documentation</h1>
+
+	<div ng-repeat="(module_name, module) in documentation">
+		<h2>{{ module_name }}</h2>
+		<div ng-repeat="(attr_name, attr) in module.attributes">
+			<h3>{{ attr_name }}</h3>
+			{{ attr.desc }}
+			<br>
+			<b>Valeur : </b>{{ attr.value }}
+		</div>
+		<div ng-repeat="(method_name, method) in module.methods">
+			<h3>.{{ method_name }}(<span ng-repeat="arg in method.type.args">{{ arg.type }}{{$last ? '' : ', '}}</span>) → {{ method.type.return.type }}</h3>
+			{{ method.desc }}
+			<br>
+			<b>Retour : </b> {{ method.return }}
+		</div>
+		<div ng-repeat="(method_name, method) in module.static_methods">
+			<h3>{{module_name}}.{{ method_name }}(<span ng-repeat="arg in method.type.args">{{ arg.type }}{{$last ? '' : ', '}}</span>) → {{ method.type.return.type }}</h3>
+			{{ method.desc }}
+			<br>
+			<b>Retour : </b> {{ method.return }}
+		</div>
 	</div>
-	<div ng-repeat="(method_name, method) in module.methods">
-		<h3>.{{ method_name }}(<span ng-repeat="arg in method.type.args">{{ arg.type }}{{$last ? '' : ', '}}</span>) → {{ method.type.return.type }}</h3>
-		{{ method.desc }}
-		<br>
-		<b>Retour : </b> {{ method.return }}
-	</div>
-	<div ng-repeat="(method_name, method) in module.static_methods">
-		<h3>{{module_name}}.{{ method_name }}(<span ng-repeat="arg in method.type.args">{{ arg.type }}{{$last ? '' : ', '}}</span>) → {{ method.type.return.type }}</h3>
-		{{ method.desc }}
-		<br>
-		<b>Retour : </b> {{ method.return }}
-	</div>
+
 </div>
