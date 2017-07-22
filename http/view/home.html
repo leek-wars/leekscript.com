@@ -6,12 +6,16 @@
 	<a href="/operations">Operations</a>
 </h3>
 
-<textarea id='console' spellcheck=false ng-model='console' ng-keyup='keypressed($event)'>
-
-</textarea>
+<div class='console'>
+	<div class='bar'></div>
+	<div class='content'>
+		<textarea id='console' spellcheck=false ng-model='console' ng-keyup='keypressed($event)'>[1, 2, 3] ~~ x -> x ** 2</textarea>
+	</div>
+	<button ng-click='execute()'>Execute</button>
+	<button ng-click='random()'>Random code</button>
+</div>
 <br>
-<button ng-click='execute()'>Execute</button>
-<button ng-click='random()'>Random code</button>
+
 <br>
 <br>
 <div ng-show='result'>
