@@ -14,16 +14,16 @@ module.exports = {
 			{ href: "https://use.fontawesome.com/releases/v5.0.13/css/all.css", rel: "stylesheet" }
 		]
 	},
-  /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
-  meta: {
-    theme_color: '#00ACC1'
-  },
-  /*
-  ** Build configuration
-  */
+	/*
+	** Customize the progress bar color
+	*/
+	loading: { color: '#3B8070' },
+	meta: {
+		theme_color: '#00ACC1'
+	},
+	/*
+	** Build configuration
+	*/
 	build: {
 	/*
 	** Run ESLint on save
