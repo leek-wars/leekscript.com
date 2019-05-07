@@ -16,12 +16,12 @@ CodeMirror.defineMode('leekscript', (config, modeOptions) => {
 		var jsKeywords = {
 			"if": kw('if'), "while": A, "else": B, "do": B,
 			"return": C, "break": C, "continue": C, "and": kw('and'), "or": kw('or'), "xor": kw('xor'), "not": kw('not'), "is": kw('is'),
-			"for": kw('for'), "in": kw('operator'), 'new': kw('new'), 'class': kw('class'), 'let': kw('let'), 'const': kw('const'),
+			"for": kw('for'), "in": kw('operator'), 'new': kw('new'), 'class': kw('class'), 'let': kw('let'), 'const': kw('const'), 'then': kw('then'), 'end': kw('end'),
 			"var": variableDeclaration, "global": variableDeclaration, "function": functionDeclaration,
 			"true": atom, "false": atom, "null": atom
 		};
 		
-		for (var c of ['Null', 'Boolean', 'Number', 'String', 'Array', 'Interval', 'Set', 'Map', 'Function', 'Class']) {
+		for (var c of ['Null', 'Boolean', 'Number', 'String', 'Array', 'Interval', 'Set', 'Map', 'Object', 'Function', 'Class']) {
 			jsKeywords[c] = {type: "variable", style: "lsconst"}
 		}
 		
