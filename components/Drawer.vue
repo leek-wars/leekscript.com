@@ -1,5 +1,5 @@
 <template>
-	<v-navigation-drawer app clipped v-model="open">
+	<v-navigation-drawer app clipped>
 		<template v-for="category in items">
 			<v-subheader :key="category.title + '_'">{{ category.title }}</v-subheader>
 			<v-list :key="category.title" dense class="pt-0">
