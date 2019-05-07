@@ -1,6 +1,14 @@
 import Vue from 'vue'
-import VueCodeMirror from 'vue-codemirror'
+import { CodeMirror, codemirror, install } from 'vue-codemirror'
 
 import '~/plugins/leekscript-mode.js'
+import '~/plugins/runmode.js'
 
-Vue.use(VueCodeMirror)
+Vue.use({ CodeMirror, codemirror, install })
+Vue.mixin({
+	data: function() {
+		return {
+			CodeMirror
+		}
+	}
+})
