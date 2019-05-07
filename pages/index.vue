@@ -1,37 +1,6 @@
-<div class='wrapper'>
-
-	<div class='console'>
-		<div class='bar'></div>
-		<div class='content'>
-			<textarea id='console' spellcheck=false ng-model='console' ng-keyup='keypressed($event)'>[1, 2, 3] ~~ x -> x ** 2</textarea>
-		</div>
-		<button ng-click='execute()'>Execute</button>
-		<button ng-click='random()'>Random code</button>
-	</div>
-	<br>
-
-	<br>
-	<br>
-	<div ng-show='result'>
-		<b>{{ result.res }}</b>
-		<br>
-		<i>Time :</i> {{ Math.round(result.time / 1000) / 1000 }}ms
-		<br>
-		<i>{{ result.ops }} operations</i>
-	</div>
-</div>
-
-<div class='light'>
-	<div class='wrapper'>
-		<h2>Simple and powerful</h2>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a porttitor est. Mauris cursus turpis diam, ut bibendum massa lobortis imperdiet. Integer id pharetra lorem. Fusce id vulputate mauris, nec tincidunt est. Sed fringilla, ex in mattis rutrum, augue diam pharetra dui, id porta metus massa et enim. Donec malesuada a nunc ultrices tincidunt. Ut dolor augue, consequat non facilisis ut, tincidunt vel augue. Sed turpis orci, rhoncus non porta eu, finibus id enim. Etiam porttitor mauris ex, non gravida mi viverra ut. Morbi vel nibh nec nunc egestas tincidunt. Mauris placerat quam vitae auctor ultricies.
-	</div>
-</div>
-
-<div class='dark'>
-	<div class='wrapper'>
-
-		<h1>Showcase</h1>
+<template>
+	<v-container>
+		<h1>LeekScript language</h1>
 
 		<div class='column6'>
 			<div class='console shadow small'>
@@ -118,13 +87,12 @@
 				Toutes les valeurs sont manipulables comme des objets, elles peuvent avoir des attributs et des méthodes. Mais pas de panique, le compilateur se charge d'optimiser le programme en utilisant des types primitifs au maximum.
 			</div>
 		</div>
-	</div>
-</div>
+	</v-container>
+</template>
 
-<div class='light'>
-	<div class='wrapper'>
-		<h2>Projects using LeekScript</h2>
+<style>
+	h3 {
+		margin: 10px 0;
+	}
+</style>
 
-		Leek Wars
-	</div>
-</div>

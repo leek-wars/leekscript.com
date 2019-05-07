@@ -1,0 +1,40 @@
+{
+	"name": "leekscript.com",
+	"version": "1.0.0",
+	"description": "Nuxt.js project",
+	"author": "Pilow <pierre.laupretre@gmail.com>",
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+		"precommit": "npm run lint"
+	},
+	"dependencies": {
+		"@nuxtjs/vuetify": "^0.5.5",
+		"codemirror": "^5.46.0",
+		"nuxt": "^2.0.0",
+		"ts-node": "^8.1.0",
+		"vue-codemirror": "^4.0.6",
+		"vue-property-decorator": "^8.1.0"
+	},
+	"devDependencies": {
+		"@nuxt/typescript": "^2.6.3",
+		"@nuxtjs/eslint-config": "0.0.1",
+		"@types/codemirror": "0.0.74",
+		"@typescript-eslint/eslint-plugin": "^1.7.0",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^4.19.1",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-friendly-formatter": "^4.0.1",
+		"eslint-loader": "^2.1.1",
+		"eslint-plugin-import": "^2.17.2",
+		"eslint-plugin-jest": "^22.5.1",
+		"eslint-plugin-node": "^9.0.1",
+		"eslint-plugin-promise": "^4.1.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"eslint-plugin-vue": "^4.7.1",
+		"typescript": "^3.4.5"
+	}
+}
