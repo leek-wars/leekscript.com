@@ -1,5 +1,5 @@
 <template>
-	<v-navigation-drawer app clipped>
+	<v-navigation-drawer app clipped mobile-break-point="960" v-model="LeekScript.drawerOpened">
 		<template v-for="category in items">
 			<v-subheader :key="category.title + '_'">{{ category.title }}</v-subheader>
 			<v-list :key="category.title" dense class="pt-0">
@@ -18,9 +18,11 @@
 
 <script lang="ts">
 	import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
+	import { LeekScript } from '~/store/leekscript'
 	@Component({})
 	export default class Drawer extends Vue {
 		@Prop() open!: boolean
+		LeekScript = LeekScript
 		items = [
 			{title: 'LeekScript', items: [
 				{title: 'Home', icon: 'home', link: '/'},
@@ -39,7 +41,3 @@
 		]
 	}
 </script>
-
-<style>
-	
-</style>
