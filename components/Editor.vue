@@ -8,7 +8,7 @@
 	import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 	@Component({})
 	export default class Editor extends Vue {
-		public code: string = 'var n = [1, 2, 3]\nvar carrés = n ~~ x -> x ** 2\ncarrés.sum()'
+		public code: string = 'let n = [1, 2, 3, 4]\nlet carrés = n ~~ x -> x ** 2\n\nSystem.print("hello world!")\ncarrés.sum()'
 		public options = {
 			theme: 'leekscript',
 			mode: 'leekscript',
