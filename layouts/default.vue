@@ -1,14 +1,7 @@
 <template>
 	<v-app id="app">
 		<drawer></drawer>
-		<v-toolbar app dark clipped-left color="primary">
-			<v-toolbar-side-icon @click.stop="open = !open"></v-toolbar-side-icon>
-			<v-toolbar-title class="white--text">LeekScript</v-toolbar-title>
-			<v-spacer></v-spacer>
-			<v-btn icon>
-				<v-icon>search</v-icon>
-			</v-btn>
-		</v-toolbar>
+		<toolbar></toolbar>
 		<v-content>
 			<nuxt/>
 		</v-content>
@@ -53,11 +46,12 @@
 
 <script>
 import Drawer from '~/components/Drawer.vue'
+import Toolbar from '~/components/Toolbar.vue'
 
 export default {
 	components: {
-		Drawer
-	},
+		Drawer, Toolbar
+	}
 }
 </script>
 
@@ -73,6 +67,9 @@ export default {
 	}
 	h1 {
 		margin-bottom: 10px;
+	}
+	.v-toolbar--clipped {
+		z-index: 5;
 	}
 </style>
 
