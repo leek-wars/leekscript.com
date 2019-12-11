@@ -66,7 +66,17 @@ export default {
 		-webkit-font-smoothing: antialiased;
 	}
 	h1 {
+		font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+		display: block;
+		font-weight: 500;
+		color: #35495e;
+		font-size: 30px;
 		margin-bottom: 10px;
+	}
+	h2 {
+		font-weight: 300;
+		font-size: 22px;
+		color: #526488;
 	}
 	.v-toolbar--clipped {
 		z-index: 5;
