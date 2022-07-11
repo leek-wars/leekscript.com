@@ -2,7 +2,6 @@
 	"name": "leekscript.com",
 	"version": "1.0.0",
 	"description": "Nuxt.js project",
-	"author": "Pilow <pierre.laupretre@gmail.com>",
 	"scripts": {
 		"dev": "nuxt",
 		"build": "nuxt build",
